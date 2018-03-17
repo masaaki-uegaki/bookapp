@@ -43,7 +43,7 @@ Route::group(['middleware' => ['web']], function() {
                 ->withErrors($validator);
         }
 
-        $book = new Book; //ORM(with Laravel)
+        $book = new Book; // ORM(with Laravel)
         $book->title = $request->name;
         $book->save();
 
@@ -51,6 +51,7 @@ Route::group(['middleware' => ['web']], function() {
     });
 
     Route::delete('/book/{book}', function(Book $book) {
-        //
+        $book->delete();
+        return redirect('/');
     });
 });
