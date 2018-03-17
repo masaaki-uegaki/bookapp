@@ -13,7 +13,7 @@
 					@include('common.errors')
 
 					<!-- New Book Form -->
-					<form action="/book" method="POST" class="form-horizontal">
+					<form action="/books" method="POST" class="form-horizontal">
 						{{ csrf_field() }}
 
 						<!-- Book Name -->
@@ -57,7 +57,7 @@
 
 										<!-- Task Delete Button -->
 										<td>
-											<form action="/book/{{ $book->id }}" method="POST">
+											<form action="/books/{{ $book->id }}" method="POST">
 												{{ csrf_field() }}
 												{{ method_field('DELETE') }}
 
