@@ -12,17 +12,17 @@
 			{{ csrf_field() }}
 
 			<!-- Book Name -->
-			<div class="form-group">
-				<label for="task-name" class="col-sm-3 control-label">{{ __('書籍名') }}</label>
+			<div class="form-group row">
+				<label for="bookName" class="col-sm-1 control-label">{{ __('書籍名') }}</label>
 
-				<div class="col-sm-6">
+				<div class="col-sm-8">
 					<input type="text" name="bookName" id="bookName" class="form-control" value="{{ old('book') }}">
 				</div>
 			</div>
 
 			<!-- Add Book Button -->
-			<div class="form-group">
-				<div class="col-sm-offset-3 col-sm-6">
+			<div class="form-group row">
+				<div class="col-sm-1">
 					<button type="submit" class="btn btn-primary">
 						<i class="fa fa-plus"></i>{{ __('追加') }}
 					</button>

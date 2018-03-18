@@ -5,7 +5,7 @@
 		</div>
 
 		<div class="card-body">
-			<table class="table table-striped task-table">
+			<table class="table table-striped">
 				<thead>
 					<th>{{ __('書籍名') }}</th>
 					<th>&nbsp;</th>
@@ -17,14 +17,16 @@
 
 							<!-- Task Delete Button -->
 							<td>
-								<form action="/books/{{ $book->id }}" method="POST">
-									{{ csrf_field() }}
-									{{ method_field('DELETE') }}
+								<div class="float-right">
+									<form action="/books/{{ $book->id }}" method="POST">
+										{{ csrf_field() }}
+										{{ method_field('DELETE') }}
 
-									<button type="submit" class="btn btn-danger">
-										<i class="fa fa-trash"></i>{{ __('削除') }}
-									</button>
-								</form>
+										<button type="submit" class="btn btn-danger">
+											<i class="fa fa-trash"></i>{{ __('削除') }}
+										</button>
+									</form>
+								</div>
 							</td>
 						</tr>
 					@endforeach
