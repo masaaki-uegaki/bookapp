@@ -25,7 +25,7 @@ class BookService extends Service
      */
     public static function addBook(Request $request) {
         $validator = \Validator::make($request->all(), [
-            'name' => 'required|max:255',
+            'bookName' => 'required|max:255',
         ]);
 
         if ($validator->fails()) {

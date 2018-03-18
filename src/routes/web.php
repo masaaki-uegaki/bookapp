@@ -3,6 +3,9 @@
 use App\Book;
 use Illuminate\Http\Request;
 
+App::setLocale('ja');
+Config::set('app.timezone', 'Asia/Tokyo');
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
