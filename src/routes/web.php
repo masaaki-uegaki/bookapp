@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Book;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +13,8 @@
 |
 */
 
+Route::resource('/', 'BookController', ['only' => ['index']]);
 Route::resources([
-    '/' => 'BookController',
     'books' => 'BookController',
 ]);
 
