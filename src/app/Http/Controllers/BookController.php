@@ -30,7 +30,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        return view('books', ['books' => $this->bookService::getBooks()]);
+        return view('layouts.books', ['books' => $this->bookService::getBooks()]);
     }
 
     /**
@@ -40,7 +40,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('books.create');
+        return view('layouts.books');
     }
 
     /**
@@ -74,7 +74,7 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        return view('books.edit', ['book' => $book]);
+        return view('layouts.books', ['book' => $book]);
     }
 
     /**
