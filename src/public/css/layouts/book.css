@@ -1,3 +1,11 @@
 .card-columns {
   column-count: 1;
 }
+
+.buttons {
+  display: flex;
+
+}
+.buttons form {
+  padding-left: 0.5rem;
+}
