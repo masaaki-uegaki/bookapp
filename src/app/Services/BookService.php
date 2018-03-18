@@ -30,8 +30,9 @@ class BookService extends Service
     /**
      * Add book
      *
+     * @return void
      */
-    public static function addBook(Request $request) {
+    public static function addBook(Request $request): void {
         if (self::validateBook($request) != null) {
             return;
         }
@@ -44,8 +45,9 @@ class BookService extends Service
     /**
      * Update book
      *
+     * @return void
      */
-    public static function updateBook(Request $request, Book $book) {
+    public static function updateBook(Request $request, Book $book): void {
         if (self::validateBook($request) != null) {
             return;
         }
