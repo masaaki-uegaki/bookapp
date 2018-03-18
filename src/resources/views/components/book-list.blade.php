@@ -13,7 +13,7 @@
 				<tbody>
 					@foreach ($books as $book)
 						<tr>
-							<td class="table-text"><div>{{ $book->title }}</div></td>
+							<td class="table-text"><div>{{ $book->bookName }}</div></td>
 
 							<td>
 								<div class="float-right">

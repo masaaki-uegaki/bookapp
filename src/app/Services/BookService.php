@@ -43,7 +43,7 @@ class BookService extends Service
         }
 
         $book = new Book; // ORM(with Laravel)
-        $book->title = $request->bookName;
+        $book->bookName = $request->bookName;
         $book->save();
     }
 

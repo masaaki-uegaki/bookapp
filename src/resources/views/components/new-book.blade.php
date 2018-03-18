@@ -9,7 +9,7 @@
 
 		<!-- New Book Form -->
 		<form action="/books" method="POST" class="form-horizontal">
-			{{ csrf_field() }}
+			@csrf
 
 			<!-- Book Name -->
 			<div class="form-group row">
