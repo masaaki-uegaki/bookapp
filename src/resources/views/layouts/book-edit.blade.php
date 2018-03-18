@@ -10,8 +10,9 @@
                 <div class="card-body">
 									<!-- Display Validation Errors -->
 									@include('common.errors')
-                    <form action="/books" method="PUT" class="form-horizontal">
+                    <form action="/books/{{ $book->id }}" method="POST" class="form-horizontal">
                         @csrf
+                        @method('PUT')
 
                         <div class="form-group row">
                             <label for="bookName" class="col-md-4 col-form-label text-md-right">{{ __('書籍名') }}</label>

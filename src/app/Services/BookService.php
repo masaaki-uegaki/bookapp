@@ -51,7 +51,7 @@ class BookService extends Service
      * Update book
      *
      */
-    public static function updateBook(Book $book) {
+    public static function updateBook(Request $request, Book $book) {
         $validator = \Validator::make($request->all(), [
             'bookName' => 'required|max:255',
         ]);
@@ -62,8 +62,7 @@ class BookService extends Service
                 ->withErrors($validator);
         }
 
-        $book = new Book; // ORM(with Laravel)
-        $book->title = $request->bookName;
+        $book->bookName = $request->bookName;
         $book->save();
     }
 

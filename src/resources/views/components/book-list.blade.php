@@ -20,8 +20,8 @@
 									<div class="row">
 										<div class="col">
 											<form action="/books/{{ $book->id }}" method="POST">
-												{{ csrf_field() }}
-												{{ method_field('GET') }}
+												@csrf
+												@method('GET')
 
 												<button type="submit" class="btn btn-success">
 													<i class="fa fa-edit"></i>{{ __('編集') }}
@@ -30,8 +30,8 @@
 										</div>
 										<div class="col">
 											<form action="/books/{{ $book->id }}" method="POST">
-												{{ csrf_field() }}
-												{{ method_field('DELETE') }}
+												@csrf
+												@method('DELETE')
 
 												<button type="submit" class="btn btn-danger">
 													<i class="fa fa-trash"></i>{{ __('削除') }}

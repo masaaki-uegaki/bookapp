@@ -10,6 +10,7 @@
 		<!-- New Book Form -->
 		<form action="/books" method="POST" class="form-horizontal">
 			@csrf
+			@method('POST')
 
 			<!-- Book Name -->
 			<div class="form-group row">
