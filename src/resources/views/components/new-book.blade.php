@@ -23,7 +23,7 @@
 
 			<!-- Add Book Button -->
 			<div class="form-group row">
-				<div class="col-sm-1">
+				<div class="offset-sm-1 col-sm-1">
 					<button type="submit" class="btn btn-primary">
 						<i class="fa fa-plus"></i>{{ __('追加') }}
 					</button>
