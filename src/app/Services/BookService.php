@@ -32,14 +32,8 @@ class BookService extends Service
      *
      */
     public static function addBook(Request $request) {
-        $validator = \Validator::make($request->all(), [
-            'bookName' => 'required|max:255',
-        ]);
-
-        if ($validator->fails()) {
-            return redirect('/')
-                ->withInput()
-                ->withErrors($validator);
+        if (self::validateBook($request) != null) {
+            return;
         }
 
         $book = new Book; // ORM(with Laravel)
@@ -52,6 +46,29 @@ class BookService extends Service
      *
      */
     public static function updateBook(Request $request, Book $book) {
+        if (self::validateBook($request) != null) {
+            return;
+        }
+
+        $book->bookName = $request->bookName;
+        $book->save();
+    }
+
+    /**
+     * Delete book
+     *
+     * @return void
+     */
+    public static function deleteBook(Book $book): void {
+        $book->delete();
+    }
+
+    /**
+     * Validate book
+     *
+     * @return void
+     */
+    private static function validateBook(Request $request) {
         $validator = \Validator::make($request->all(), [
             'bookName' => 'required|max:255',
         ]);
@@ -62,16 +79,6 @@ class BookService extends Service
                 ->withErrors($validator);
         }
 
-        $book->bookName = $request->bookName;
-        $book->save();
-    }
-
-    /**
-     * Delete book
-     *
-     * @return Book
-     */
-    public static function deleteBook(Book $book): void {
-        $book->delete();
+        return;
     }
 }
