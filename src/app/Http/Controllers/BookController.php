@@ -11,6 +11,7 @@ use App\Services;
 class BookController extends Controller
 {
     private $bookService;
+    const VIEW_LAYOUT_BOOKS = 'layouts.books';
 
     /**
      * Instantiate a new controller instance.
@@ -30,7 +31,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        return view('layouts.books', ['books' => $this->bookService::getBooks()]);
+        return view(self::VIEW_LAYOUT_BOOKS, ['books' => $this->bookService::getBooks()]);
     }
 
     /**
@@ -40,7 +41,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('layouts.books');
+        return view(self::VIEW_LAYOUT_BOOKS);
     }
 
     /**
@@ -74,7 +75,7 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        return view('layouts.books', ['book' => $book]);
+        return view(self::VIEW_LAYOUT_BOOKS, ['book' => $book]);
     }
 
     /**
