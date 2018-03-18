@@ -16,7 +16,7 @@
 				<label for="bookName" class="col-sm-1 control-label">{{ __('書籍名') }}</label>
 
 				<div class="col-sm-8">
-					<input type="text" name="bookName" id="bookName" class="form-control" value="{{ old('book') }}">
+					<input type="text" name="bookName" id="bookName" class="form-control" value="{{ old('book') }}" required>
 				</div>
 			</div>
 
