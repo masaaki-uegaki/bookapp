@@ -1,7 +1,3 @@
-@section('pageCss')
-<link href="{{ asset('css/components/book-list.css') }}" rel="stylesheet">
-@endsection
-
 @if (count( $books  ) > 0)
 	<div class="card">
 		<div class="card-header">

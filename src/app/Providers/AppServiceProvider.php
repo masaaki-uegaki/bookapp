@@ -33,6 +33,7 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     private function registerComponents(): void {
+        Blade::component('components.navbar', 'navbar');
         Blade::component('components.new-book', 'newBook');
         Blade::component('components.book-list', 'bookList');
     }
