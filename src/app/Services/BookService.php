@@ -24,7 +24,7 @@ class BookService extends Service
      */
     public static function getBook(Book $book): Book
     {
-        return Book::find($book->$id);
+        return Book::find($book->id);
     }
 
     /**

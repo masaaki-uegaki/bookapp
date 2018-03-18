@@ -21,7 +21,7 @@
 										<div class="col">
 											<form action="/books/{{ $book->id }}" method="POST">
 												{{ csrf_field() }}
-												{{ method_field('PUT') }}
+												{{ method_field('GET') }}
 
 												<button type="submit" class="btn btn-success">
 													<i class="fa fa-edit"></i>{{ __('編集') }}

@@ -64,7 +64,7 @@ class BookController extends Controller
      */
     public function show(Book $book)
     {
-        return view(self::VIEW_LAYOUT_BOOK_EDIT, ['book' => $this->bookService::getBook($request)]);
+        return view(self::VIEW_LAYOUT_BOOK_EDIT, ['book' => $this->bookService::getBook($book)]);
         
     }
 
