@@ -1,3 +1,7 @@
+@section('pageCss')
+<link href="{{ asset('css/components/new-book.css') }}" rel="stylesheet">
+@endsection
+
 <div class="card">
 	<div class="card-header">
 		{{ __('新規書籍の登録') }}
