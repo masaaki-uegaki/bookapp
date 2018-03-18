@@ -15,18 +15,31 @@
 						<tr>
 							<td class="table-text"><div>{{ $book->title }}</div></td>
 
-							<!-- Task Delete Button -->
 							<td>
 								<div class="float-right">
-									<form action="/books/{{ $book->id }}" method="POST">
-										{{ csrf_field() }}
-										{{ method_field('DELETE') }}
+									<div class="row">
+										<div class="col">
+											<form action="/books/{{ $book->id }}" method="POST">
+												{{ csrf_field() }}
+												{{ method_field('PUT') }}
 
-										<button type="submit" class="btn btn-danger">
-											<i class="fa fa-trash"></i>{{ __('削除') }}
-										</button>
-									</form>
-								</div>
+												<button type="submit" class="btn btn-success">
+													<i class="fa fa-edit"></i>{{ __('編集') }}
+												</button>
+											</form>
+										</div>
+										<div class="col">
+											<form action="/books/{{ $book->id }}" method="POST">
+												{{ csrf_field() }}
+												{{ method_field('DELETE') }}
+
+												<button type="submit" class="btn btn-danger">
+													<i class="fa fa-trash"></i>{{ __('削除') }}
+												</button>
+											</form>
+										</div>
+									</div>
+								<div>
 							</td>
 						</tr>
 					@endforeach

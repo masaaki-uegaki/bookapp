@@ -11,6 +11,7 @@ class BookController extends Controller
 {
     private $bookService;
     const VIEW_LAYOUT_BOOKS = 'layouts.books';
+    const VIEW_LAYOUT_BOOK_EDIT = 'layouts.book-edit';
 
     /**
      * Instantiate a new controller instance.
@@ -63,7 +64,8 @@ class BookController extends Controller
      */
     public function show(Book $book)
     {
-        //
+        return view(self::VIEW_LAYOUT_BOOK_EDIT, ['book' => $this->bookService::getBook($request)]);
+        
     }
 
     /**
@@ -74,7 +76,7 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        return view(self::VIEW_LAYOUT_BOOKS, ['book' => $book]);
+        return view(self::VIEW_LAYOUT_BOOK_EDIT, ['book' => $book]);
     }
 
     /**
@@ -86,7 +88,8 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
-        //
+        $this->bookService::updateBook($book);
+        return redirect('/');
     }
 
     /**
