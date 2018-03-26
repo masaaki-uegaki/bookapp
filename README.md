@@ -1,8 +1,11 @@
 # BookApp
 
 # Run application on docker
-cd laradoc
 
+cd src
+npm install
+
+cd laradoc
 docker-compose up -d nginx mysql workspace
 
 # Access web page
