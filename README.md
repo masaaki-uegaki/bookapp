@@ -6,7 +6,7 @@ cd src
 
 npm install
 
-cd laradoc
+cd ../laradoc
 
 docker-compose up -d nginx mysql workspace
 
