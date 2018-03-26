@@ -8,8 +8,8 @@
                 <div class="card-header">{{ __('書籍編集') }}</div>
 
                 <div class="card-body">
-									<!-- Display Validation Errors -->
-									@include('common.errors')
+                    <!-- Display Validation Errors -->
+                    @include('common.errors')
                     <form action="/books/{{ $book->id }}" method="POST" class="form-horizontal">
                         @csrf
                         @method('PUT')
